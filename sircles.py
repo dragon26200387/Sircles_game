@@ -48,13 +48,17 @@ while game:
 		wn.bgcolor('black')	
 		goal.home()
 		goal.color('white')
-		goal.write('Game over', font = ('Arial', 24, 'normal'))	
+		goal.write('Game over', font = ('Arial', 24, 'normal'))
+		goal.color("white")
+		goal.goto(0, -100)
+		goal.write(iso, font = ("Arial", 24, "normal"))
 	if is_colision(mouse, goal):
 		inc += 0.01
 		size = 1
 		score += 1
 		goal.goto(random.randint(-300, 300), 
-			random.randint(-300, 300))	
+			random.randint(-300, 300))
+
+iso = is_colision(mouse, goal)	
 
 wn.exitonclick()
-
