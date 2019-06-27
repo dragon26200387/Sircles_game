@@ -37,6 +37,11 @@ turtle.onkey(exit, 'q')
 
 #wn.tracer(2)
 game = True
+goal.goto(-100, 300)
+goal.color("black")
+goal.write((f"Score: {score}!"), font = ("Arial", 24, "normal"))
+goal.clear()
+goal.color()
 while game:
 	size += inc
 	goal.shapesize(size)
@@ -53,6 +58,7 @@ while game:
 		goal.write('Game over', font = ('Arial', 24, 'normal'))
 		goal.color("white")
 		goal.goto(0, -100)
+		goal.write(f"Scores: {score}!", font = ("Arial", 24, "normal"))
 	
 	if is_colision(mouse, goal):
 		inc += 0.01
@@ -60,6 +66,6 @@ while game:
 		score += 1
 		goal.goto(random.randint(-300, 300), 
 			random.randint(-300, 300))
-	t.write((f"Score: {score}!"), font = ("Arial", 24, "normal"))
+		t.clear()
 
 wn.exitonclick()
