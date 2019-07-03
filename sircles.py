@@ -21,7 +21,7 @@ mouse.up()
 
 t = turtle.Turtle()
 
-maxGoals = 1
+maxGoals = 10
 goals = []
 for i in range(maxGoals):
 	goals.append(turtle.Turtle())
